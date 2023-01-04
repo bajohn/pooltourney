@@ -34,7 +34,7 @@ resource "aws_iam_policy_attachment" "pooltourney-apigw-attachment" {
 
 resource "aws_apigatewayv2_deployment" "pooltourney-deployment" {
   api_id      = aws_apigatewayv2_api.pooltourney-api.id
-  description = "Tennis matcher deployment"
+  description = "Pool tourney deployment"
   triggers = {
     redeployment = timestamp()
   }
